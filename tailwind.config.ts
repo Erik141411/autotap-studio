@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Orbitron', 'sans-serif'],
-        body: ['Rajdhani', 'sans-serif'],
+        display: ['"Press Start 2P"', 'monospace'],
+        body: ['VT323', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,11 +61,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        neon: {
-          cyan: "hsl(var(--neon-cyan))",
-          magenta: "hsl(var(--neon-magenta))",
-          blue: "hsl(var(--neon-blue))",
-          purple: "hsl(var(--neon-purple))",
+        mc: {
+          emerald: "hsl(var(--mc-emerald))",
+          diamond: "hsl(var(--mc-diamond))",
+          coal: "hsl(var(--mc-coal))",
+          stone: "hsl(var(--mc-stone))",
         },
       },
       borderRadius: {
