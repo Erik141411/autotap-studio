@@ -64,12 +64,16 @@ const MinecraftHero = () => {
             <div className="flex items-start gap-3">
               <AlertTriangle className="h-6 w-6 text-primary flex-shrink-0" />
               <div className="text-left">
-                <p className="text-sm font-display text-primary mb-1">
-                  ⚠ NUR FÜR EIGENE SERVER
+                <p className="text-sm font-display text-primary mb-2">
+                  ⚠ WICHTIGER HINWEIS
                 </p>
-                <p className="text-xs font-body text-muted-foreground">
+                <p className="text-xs font-body text-muted-foreground mb-2">
                   Dieser Auto-Clicker ist nur für private Server und Test-Umgebungen erlaubt. 
                   Die Verwendung auf öffentlichen Servern kann gegen deren Regeln verstoßen.
+                </p>
+                <p className="text-xs font-body text-primary/80">
+                  ℹ️ Browser-Version: Funktioniert nur wenn Browser-Tab aktiv ist. 
+                  Für echte Ingame-Klicks bräuchtest du eine native Desktop-App.
                 </p>
               </div>
             </div>
