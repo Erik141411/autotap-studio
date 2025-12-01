@@ -66,13 +66,32 @@ const AutoClickerControl = () => {
     });
   };
 
+  const toggleClicking = () => {
+    if (isActive) {
+      stopClicking();
+    } else {
+      startClicking();
+    }
+  };
+
+  // F9 Hotkey Support
   useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === "F9") {
+        e.preventDefault();
+        toggleClicking();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    
     return () => {
+      window.removeEventListener("keydown", handleKeyPress);
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
     };
-  }, []);
+  }, [isActive, cps, mode, clickCount]);
 
   return (
     <Card className="p-8 bg-card minecraft-border stone-texture max-w-2xl mx-auto">
@@ -166,7 +185,7 @@ const AutoClickerControl = () => {
         </div>
 
         {/* Info */}
-        <div className="pt-4 border-t-4 border-border">
+        <div className="pt-4 border-t-4 border-border space-y-3">
           <div className="flex items-start gap-3 bg-muted/20 p-4 minecraft-border">
             <MousePointer2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
             <div className="space-y-1">
@@ -180,6 +199,13 @@ const AutoClickerControl = () => {
                 <span className="font-display text-primary">Burst:</span> 3 schnelle Klicks pro Intervall
               </p>
             </div>
+          </div>
+          
+          {/* Hotkey Info */}
+          <div className="bg-primary/10 p-4 minecraft-border">
+            <p className="text-sm font-display text-primary text-center">
+              🎮 Drücke <kbd className="px-2 py-1 bg-card minecraft-border mx-1">F9</kbd> zum An/Aus
+            </p>
           </div>
         </div>
       </div>
