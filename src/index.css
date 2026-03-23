@@ -2,60 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Minecraft Dark Theme - Black & Gray */
-    --background: 0 0% 8%;
+    --background: 150 10% 7%;
     --foreground: 0 0% 95%;
 
-    --card: 0 0% 12%;
+    --card: 150 8% 10%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 10%;
+    --popover: 150 8% 10%;
     --popover-foreground: 0 0% 95%;
 
-    /* Minecraft Green Primary (Emerald) */
-    --primary: 140 70% 45%;
+    --primary: 145 80% 42%;
     --primary-foreground: 0 0% 0%;
 
-    /* Gray Secondary */
-    --secondary: 0 0% 30%;
+    --secondary: 150 6% 15%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 150 6% 15%;
+    --muted-foreground: 0 0% 55%;
 
-    /* Stone Gray Accent */
-    --accent: 0 0% 40%;
+    --accent: 150 6% 18%;
     --accent-foreground: 0 0% 95%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 25%;
-    --input: 0 0% 18%;
-    --ring: 140 70% 45%;
+    --border: 150 6% 18%;
+    --input: 150 6% 15%;
+    --ring: 145 80% 42%;
 
-    --radius: 0.125rem;
+    --radius: 0.75rem;
 
-    /* Minecraft Colors */
-    --mc-emerald: 140 70% 45%;
-    --mc-diamond: 200 90% 65%;
-    --mc-coal: 0 0% 15%;
-    --mc-stone: 0 0% 40%;
-
-    --sidebar-background: 0 0% 8%;
+    --sidebar-background: 150 10% 9%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 140 70% 45%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 25%;
-    --sidebar-ring: 140 70% 45%;
+    --sidebar-primary: 145 80% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 145 80% 42%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 150 6% 18%;
+    --sidebar-ring: 145 80% 42%;
+
+    --warning: 45 100% 50%;
   }
 }
 
@@ -65,52 +53,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-body;
-    image-rendering: pixelated;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
-    image-rendering: pixelated;
-  }
-}
-
-/* Minecraft Block Utilities */
-@layer utilities {
-  .minecraft-border {
-    border-width: 4px;
-    border-style: solid;
-    border-color: hsl(var(--border));
-    box-shadow: 
-      inset -2px -2px 0 rgba(0, 0, 0, 0.4),
-      inset 2px 2px 0 rgba(255, 255, 255, 0.1);
-  }
-
-  .minecraft-button {
-    border-width: 3px;
-    border-style: solid;
-    box-shadow: 
-      inset -2px -2px 0 rgba(0, 0, 0, 0.5),
-      inset 2px 2px 0 rgba(255, 255, 255, 0.2);
-    image-rendering: pixelated;
-  }
-
-  .minecraft-button:active {
-    box-shadow: 
-      inset 2px 2px 0 rgba(0, 0, 0, 0.5),
-      inset -2px -2px 0 rgba(255, 255, 255, 0.1);
-  }
-
-  .stone-texture {
-    background-image: 
-      linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-    background-size: 8px 8px;
-  }
-
-  .pixel-perfect {
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 }
