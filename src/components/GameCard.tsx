@@ -5,20 +5,17 @@ interface GameCardProps {
   icon: string;
 }
 
-const GameCard = ({ name, playing, gradient, icon }: GameCardProps) => {
+const GameCard = ({ name, playing }: GameCardProps) => {
   return (
     <div className="group cursor-pointer">
       <div
         className="aspect-[4/5] rounded-xl overflow-hidden relative flex items-center justify-center transition-transform group-hover:scale-[1.02]"
-        style={{ background: gradient }}
       >
-        {/* Watermark */}
-        <div className="absolute top-2 left-0 right-0 text-center">
-          <span className="text-[10px] font-bold text-white/30 tracking-widest uppercase">NitroGamble</span>
-        </div>
-
-        {/* Icon */}
-        <span className="text-5xl">{icon}</span>
+        <img
+          src="https://i.imgur.com/8qQkuNm.jpeg"
+          alt={name}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
         {/* Game name overlay */}
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent pt-8 pb-3 px-3">
