@@ -18,32 +18,12 @@ const MainContent = () => {
   return (
     <main className="flex-1 overflow-y-auto p-6">
       {/* Banner */}
-      <div
-        className="w-full h-[200px] rounded-xl overflow-hidden relative mb-8"
-        style={{
-          background: "linear-gradient(135deg, hsl(145 80% 25%) 0%, hsl(180 60% 20%) 50%, hsl(200 70% 25%) 100%)",
-        }}
-      >
-        <div className="absolute inset-0 flex items-center justify-between px-10">
-          <div>
-            <h2 className="text-3xl font-black text-foreground uppercase leading-tight">
-              Free Codes, Events,
-              <br />
-              Updates & Giveaways
-            </h2>
-            <div className="mt-3 bg-primary rounded-lg px-4 py-2 inline-block">
-              <span className="text-primary-foreground text-sm font-bold">
-                Join the community & never miss out!
-              </span>
-            </div>
-            <div className="mt-3">
-              <button className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg px-5 py-2.5 font-bold text-sm transition-colors">
-                💬 JOIN DISCORD
-              </button>
-            </div>
-          </div>
-          <div className="text-8xl opacity-50">🎮</div>
-        </div>
+      <div className="w-full rounded-xl overflow-hidden mb-8">
+        <img
+          src="https://i.imgur.com/lyc044m.png"
+          alt="Free Codes, Events, Updates & Giveaways - NitroGamble"
+          className="w-full h-auto object-cover rounded-xl"
+        />
       </div>
 
       {/* Games section */}

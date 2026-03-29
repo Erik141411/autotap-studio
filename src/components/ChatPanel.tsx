@@ -1,16 +1,7 @@
 import { Send, Smile, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
-const mockMessages = [
-  { user: "Player1", avatar: "🎮", message: "gg nice win", time: "2m" },
-  { user: "CryptoKing", avatar: "👑", message: "anyone tried the new game?", time: "3m" },
-  { user: "LuckyDice", avatar: "🎲", message: "just hit 50x on limbo", time: "4m" },
-  { user: "NightOwl", avatar: "🦉", message: "mines is goated", time: "5m" },
-  { user: "Whale99", avatar: "🐋", message: "deposited lets go", time: "6m" },
-  { user: "GambleGod", avatar: "⚡", message: "roulette hitting different today", time: "8m" },
-  { user: "NoobPlayer", avatar: "🎯", message: "how do i play blackjack?", time: "10m" },
-  { user: "Admin", avatar: "🛡️", message: "Welcome everyone! Have fun 🎉", time: "12m", isAdmin: true },
-];
+const mockMessages: { user: string; avatar: string; message: string; time: string; isAdmin?: boolean }[] = [];
 
 const ChatPanel = () => {
   const [message, setMessage] = useState("");
