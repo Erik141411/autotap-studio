@@ -5,8 +5,6 @@ import {
 import { useState } from "react";
 
 const games = [
-  { icon: Box, label: "Cases" },
-  { icon: Swords, label: "Case Battles" },
   { icon: Spade, label: "Blackjack" },
   { icon: Bomb, label: "Mines" },
   { icon: Circle, label: "Plinko" },

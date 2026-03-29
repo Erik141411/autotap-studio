@@ -8,8 +8,6 @@ const games = [
   { name: "Limbo", playing: 7, gradient: "linear-gradient(135deg, #1a1a2a 0%, #2a3a5c 100%)", icon: "🚀" },
   { name: "Plinko", playing: 4, gradient: "linear-gradient(135deg, #2a1a2a 0%, #5c2a5c 100%)", icon: "⚪" },
   { name: "Dice", playing: 5, gradient: "linear-gradient(135deg, #1a2a2a 0%, #2a5c5c 100%)", icon: "🎲" },
-  { name: "Cases", playing: 12, gradient: "linear-gradient(135deg, #2a2a1a 0%, #5c5c2a 100%)", icon: "📦" },
-  { name: "Case Battles", playing: 3, gradient: "linear-gradient(135deg, #2a1a1a 0%, #5c3a2a 100%)", icon: "⚔️" },
   { name: "Chicken", playing: 6, gradient: "linear-gradient(135deg, #2a2a1a 0%, #5c4a2a 100%)", icon: "🐔" },
   { name: "Crash", playing: 9, gradient: "linear-gradient(135deg, #1a1a2a 0%, #3a2a5c 100%)", icon: "📈" },
 ];
