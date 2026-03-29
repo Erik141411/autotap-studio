@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { Wallet, LogIn } from "lucide-react";
+import WalletDialog from "./WalletDialog";
 
 const Navbar = () => {
+  const [walletOpen, setWalletOpen] = useState(false);
   return (
+    <>
+
     <header className="h-14 bg-card border-b border-border flex items-center justify-between px-4 z-50">
       {/* Logo */}
       <div className="flex items-center gap-2">
