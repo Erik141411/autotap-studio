@@ -23,7 +23,10 @@ const Navbar = () => {
         <div className="bg-secondary rounded-lg px-4 py-1.5 text-sm font-bold text-foreground">
           $0.00
         </div>
-        <button className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg px-4 py-1.5 text-sm font-bold transition-colors">
+        <button
+          onClick={() => setWalletOpen(true)}
+          className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg px-4 py-1.5 text-sm font-bold transition-colors"
+        >
           <Wallet className="w-4 h-4" />
           Wallet
         </button>
@@ -35,6 +38,8 @@ const Navbar = () => {
         Sign In
       </button>
     </header>
+    <WalletDialog open={walletOpen} onOpenChange={setWalletOpen} />
+    </>
   );
 };
 
